@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+# **Plataforma de Cadastro - DIO**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma **plataforma de cadastro** desenvolvida em **React**, com páginas para login, cadastro e feed de postagens. O projeto foi criado como parte de um desafio prático para aplicar conceitos como **React Router**, **Hooks**, **Styled-Components** e **validação de formulários**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **📋 Funcionalidades**
 
-### `npm start`
+- **Home**:
+  - Página inicial com informações sobre a plataforma e acesso às páginas de login e cadastro.
+- **Login**:
+  - Permite a autenticação de usuários com validação de campos.
+- **Cadastro**:
+  - Permite a criação de novos usuários.
+- **Feed**:
+  - Exibe postagens e um ranking dos melhores usuários.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **🚀 Tecnologias Utilizadas**
 
-### `npm test`
+As principais tecnologias utilizadas no desenvolvimento deste projeto são:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **[React](https://reactjs.org/)**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **[React Router DOM](https://reactrouter.com/)**: Para navegação entre páginas.
+- **[React Hook Form](https://react-hook-form.com/)**: Para validação de formulários.
+- **[Styled-Components](https://styled-components.com/)**: Para estilização dinâmica de componentes.
+- **[Axios](https://axios-http.com/)**: Para consumo de APIs.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## **📂 Estrutura do Projeto**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A estrutura do projeto foi organizada da seguinte forma:
+/src
+├── /assets # Imagens e ícones
+├── /components # Componentes reutilizáveis
+│ ├── /Button # Botão estilizado
+│ ├── /Card # Card de postagens
+│ ├── /Header # Cabeçalho da aplicação
+│ ├── /Input # Campo de entrada com ícone
+│ └── /UserInfo # Informações de usuários
+├── /pages # Páginas principais
+│ ├── /home # Página inicial
+│ ├── /login # Página de login
+│ ├── /cadastro # Página de cadastro
+│ └── /feed # Página de feed
+├── /services # Configuração de APIs
+│ └── api.js # Configuração do Axios
+├── /styles # Estilos globais e temáticos
+│ ├── global.js # Estilos globais
+│ └── styles.js # Estilos personalizados
+├── App.js # Configuração das rotas
+└── index.js # Ponto de entrada
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+plaintext
+Copy
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## **📦 Como Rodar o Projeto**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Siga os passos abaixo para clonar e rodar o projeto localmente:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **Pré-requisitos**
+- **Node.js** instalado (versão 14 ou superior).
+- Um gerenciador de pacotes: **npm** ou **yarn**.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### **Passo a Passo**
 
-## Learn More
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/seu-usuario/dio-plataforma.git
+   cd dio-plataforma
+Instale as dependências:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+bash
+Copy
+npm install
+# ou, se você usar yarn:
+yarn install
+Inicie o servidor de desenvolvimento:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+bash
+Copy
+npm start
+# ou
+yarn start
+Abra o navegador:
 
-### Code Splitting
+O projeto será executado em: http://localhost:3000.
+🔧 Como Usar
+Acesse a página inicial:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Clique no botão "Entrar" para acessar a página de login.
+Clique no botão "Cadastrar" para acessar a página de cadastro.
+Login:
 
-### Analyzing the Bundle Size
+Insira as credenciais de login para acessar o feed.
+Cadastro:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Preencha os campos de nome, e-mail e senha para criar uma nova conta.
+Feed:
 
-### Making a Progressive Web App
+Visualize as postagens e o ranking dos usuários.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+📚 Aprendizados
+Durante o desenvolvimento deste projeto, foram aplicados conceitos importantes como:
 
-### Advanced Configuration
+Configuração de rotas com React Router DOM.
+Validação de formulários com React Hook Form.
+Consumo de APIs com Axios.
+Estilização dinâmica com Styled-Components.
+Organização de componentes reutilizáveis.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+⚖️ Licença
+Este projeto está sob a licença MIT. Veja o arquivo LICENSEOpens in a new window; external. para mais detalhes.

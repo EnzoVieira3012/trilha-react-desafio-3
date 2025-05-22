@@ -1,39 +1,69 @@
-import React from 'react'
-import logo from '../../assets/logo-dio.png';
+import React from "react";
+import { useNavigate } from "react-router-dom"; // Importa o hook useNavigate
+import logo from "../../assets/logo-dio.png";
+import { Button } from "../Button";
+import {
+  Container,
+  Wrapper,
+  BuscarInputContainer,
+  Input,
+  Row,
+  Menu,
+  MenuRight,
+  UserPicture,
+} from "./styles";
 
-import { Button } from '../Button';
+const Header = ({ autenticado }) => {
+  const navigate = useNavigate(); // Hook para navegação entre páginas
 
-import { Container, Wrapper, BuscarInputContainer, Input, Row, Menu, MenuRight, UserPicture} from './styles';
+  // Função para redirecionar para a página de login
+  const handleLogin = () => {
+    navigate("/login");
+  };
 
-const Header = ({autenticado}) => {
+  // Função para redirecionar para a página de cadastro
+  const handleCadastro = () => {
+    navigate("/cadastro");
+  };
+
+  // Renderiza o menu com base no estado de autenticação
+  const renderMenu = () => {
+    if (autenticado) {
+      return (
+        <>
+          <BuscarInputContainer>
+            <Input placeholder="Buscar..." />
+          </BuscarInputContainer>
+          <Menu>Live Code</Menu>
+          <Menu>Global</Menu>
+        </>
+      );
+    }
+
+    return (
+      <>
+        <MenuRight href="/">Home</MenuRight>
+        <Button title="Entrar" onClick={handleLogin} /> {/* Botão com navegação */}
+        <Button title="Cadastrar" onClick={handleCadastro} /> {/* Botão com navegação */}
+      </>
+    );
+  };
+
   return (
     <Wrapper>
       <Container>
-          <Row>
-            <img src={logo} alt="Logo da dio"/>
-            {autenticado ? (
-              <>
-               <BuscarInputContainer>
-                <Input placeholder='Buscar...'/>
-               </BuscarInputContainer>
-                <Menu>Live Code</Menu>
-                <Menu>Global</Menu>
-              </>
-            ) : null}
-          </Row>
-          <Row>
-              {autenticado ? (
-                <UserPicture src="https://avatars.githubusercontent.com/u/45184516?v=4"/>
-              ) : (
-              <>
-                <MenuRight href="/">Home</MenuRight>
-                <Button title="Entrar" />
-                <Button title="Cadastrar" />
-              </>)}
-          </Row>
+        <Row>
+          <img src={logo} alt="Logo da Dio" />
+          {renderMenu()}
+        </Row>
+        <Row>
+          {autenticado && (
+            <UserPicture src="https://avatars.githubusercontent.com/u/45184516?v=4" />
+          )}
+        </Row>
       </Container>
     </Wrapper>
-  )
-}
+  );
+};
 
-export { Header }
+export { Header };
